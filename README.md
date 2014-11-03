@@ -38,7 +38,7 @@ var hanjaDic = {
 };
 ```
 
-`hanjaDic['한자']`은 둘 중의 하나 `undefined` 또는 음과 뜻으로 구성된 배열로 반환한다. 
+`hanjaDic['한자']`은 `undefined` 또는 배열을 반환한다. 배열에는 음과 뜻을 저장하고 있다.
 
 ```Javascript
 var chi = '丑';
@@ -50,5 +50,3 @@ console.log(hanjaDic[chi]);
 chi = '';
 console.log(hanjaDic[chi]);
 // undefined
-
-
