@@ -14,11 +14,12 @@ JSON 형태로 저장된 소규모 한자 사전 파일. 한자로 된 문서를
 - 수정된 원본 파일은 [hanja.txt](https://github.com/myungcheol/hanja/blob/master/hanja.txt)에서 볼 수 있다.
 
 ##JSON 파일 사용
+- [hanja.txt](https://github.com/myungcheol/hanja/blob/master/hanja.txt)을 읽어서 [makeJSON](https://github.com/myungcheol/hanja/blob/master/makeJSON.js)으로 `hanjaDic`을 만든다.
 - 총 9,031개의 한자가 등록되어 있다.
 - 원본 파일의 오류를 일부 수정했다.
 - 완벽한 한자 변환 서비스가 아닌 초벌 번역 수준의 서비스가 필요할 경우만 사용을 권장한다.
 - 한자 변환 오류는 책임지지 않는다.
-- hanja.js를 읽어 들이면 hanjaDic이라는 json 오브젝트에 다음과 같이 정의되어 있다.
+- hanjaDic.js 파일을 불러오면 `hanjaDic`이라는 json 오브젝트에 다음과 같이 정의되어 있다.
 
 ```Javascript
 var hanjaDic = {
@@ -37,4 +38,17 @@ var hanjaDic = {
 };
 ```
 
-hanjaDic['한자']로 찾아본 후 `undefined`가 아니라면 음과 뜻을 배열로 반환한다. 
+`hanjaDic['한자']`은 둘 중의 하나 `undefined` 또는 음과 뜻으로 구성된 배열로 반환한다. 
+
+```Javascript
+var chi = '丑';
+console.log(hanjaDic[chi]);
+// [Object, Object]
+// hanjaDic[chi][0] = {def: '수갑', kor: '추'}
+// hanjaDic[chi][1] = {def: '소', kor: '축'}
+
+chi = '';
+console.log(hanjaDic[chi]);
+// undefined
+
+
