@@ -41,11 +41,11 @@ var hanjaDic = {
 `hanjaDic['한자']`은 `undefined` 또는 배열을 반환한다. 배열에는 음과 뜻을 저장하고 있다.
 
 ```Javascript
-var chi = '丑';
+var chi = '不';
 console.log(hanjaDic[chi]);
 // [Object, Object]
-// hanjaDic[chi][0] = {def: '수갑', kor: '추'}
-// hanjaDic[chi][1] = {def: '소', kor: '축'}
+// hanjaDic[chi][0] = {kor: '불', def: '아닐'}
+// hanjaDic[chi][1] = {kor: '부', def: '아닐'}
 
 chi = '';
 console.log(hanjaDic[chi]);
