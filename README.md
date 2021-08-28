@@ -1,19 +1,19 @@
-hanja
+# hanja
 =====
 
 JSON 형태로 저장된 소규모 한자 사전 파일. 한자로 된 문서를 한글로 변환하는 용도로 사용이 가능하다. 
 
-##원본
+## 원본
 사전의 [원본](http://happycgi.com/13322)파일은 한자 독음을 기준으로 한자가 정렬되어 있다. 예를 들자면 독음이 `가`인 한자들이 먼저 나열되어 있고, 그 다음은 독음이 `간`인 한자들이 나열되어 있다. 두음법칙을 적용하기도 하여 일부 한 자는 `ㄹ`에서 한 번 `ㅇ`에서 또 한 번 나온다. 
 
-###원본 파일의 오류
+### 원본 파일의 오류
 - 두음 법칙이 적용가능한 모든 한자에 대해 두 번씩 나열된 것이 아니므로, 일부 한자는 `ㄹ` 또는 `ㅇ` 중 한 쪽에만 나올 수 있다.
 - 일부 한자는 잘못된 독음 밑에 분류가 되어있기도 하다.
 - 옛 한자의 경우 현재 사용되는 한자의 옛 한자라고만 나오고 뜻은 나오지 않는다.
 - 간체 한자의 경우도 옛 한자와 마찬가지 오류가 있다.
 - 수정된 원본 파일은 [hanja.txt](https://github.com/myungcheol/hanja/blob/master/hanja.txt)에서 볼 수 있다.
 
-##JSON 파일 사용
+## JSON 파일 사용
 - [hanja.txt](https://github.com/myungcheol/hanja/blob/master/hanja.txt)을 읽어서 [makeJSON](https://github.com/myungcheol/hanja/blob/master/makeJSON.js)으로 `hanjaDic`을 만든다.
 - 총 9,031개의 한자가 등록되어 있다.
 - 원본 파일의 오류를 일부 수정했다.
